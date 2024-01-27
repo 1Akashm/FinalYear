@@ -42,6 +42,9 @@
         font-size: 1rem;
         margin: 0 auto;
         background-color: rgba(183, 178, 178, 0.7);
+        /* height: 50px; */
+        padding: 2%;
+        font-size: 1.2rem;
     }
 
     .paragraph{
