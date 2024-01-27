@@ -213,3 +213,66 @@ nav div:nth-child(2) ul
         margin: 20% 0;
     }
 }
+
+aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #edd2d2;
+    width: 100%;
+}
+
+aside a
+{
+    color: rgb(109, 104, 104);
+    text-decoration: none;
+    text-align: center;
+}
+
+aside div a{
+    display: flex;
+    /* flex-direction: column;*/
+    justify-content: center;
+    align-items: center;    
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 2% auto;
+    padding: 5%;
+}
+
+aside div a p{
+    text-align: center;
+}
+
+.index
+{   text-align: center;
+    font-size: 10rem;
+}
+
+@media screen and (min-width:768px) {
+    aside{
+        flex-direction: row;
+    }
+}
+
+
+
+.footer{
+    height: 150px;
+    background-color: rgb(210, 173, 173);
+}
+
+.footer>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 0;
+}
+
+.footer>div>a>img{
+    width: 50px;
+    height: 50px;
+    margin-top: .5%;
+}

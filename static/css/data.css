@@ -1,64 +1,133 @@
 
-.data_container{
-    /* color: rgb(177, 176, 176); */
-    /* color: #31304D; */
-    color: #0F0F0F;
-}
 
-.overview
-{
+.data_container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    font-size: 1.3rem;
+    background-color: rgb(250, 229, 229);
+}
+
+.data_intro
+{
+    width: 80%;
+    margin: 5% auto 2%;
+}
+
+.data_intro .listheading{
+    font-size: 1.2rem;
+    margin: 2%;
+}
+
+.data_ul{
+    padding: 2%;
+}
+
+.data_ul li:nth-child(1){
+    margin-bottom: 2%;
+}
+
+.horizontal
+{
+    width: 20%;
+    border: none;
+    border-top: 5px dotted rgb(74, 70, 70);
+    margin: 0 auto 5%;
+}
+
+.logistic
+{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width:768px) {
+    .logistic
+    {
+        width: 70%;
+    }
+}
+
+.logistic p{
+    width: 50%;
+    margin: 2% auto;
+    text-align: center;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.data_second{
+    width: 80%;
+    margin: 0 auto 3%;
+}
+
+.data_second a{
+    text-decoration: none;
+    color: black;
+    background-color: red;
+    margin: 30%;
+}
+
+.obj>h2{
+    text-align: center;
+}
+
+.obj>p{
+    width: 100%;
+}
+
+.obj>pre{
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: .8rem;
+}
+
+.code2{
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .data_second{
+        width: 70%;
+    }
+
+    .obj>pre{
+        font-size: 1rem;
+    }
+
+    .code1{
+        display: none;
+    }
+
+    .code2{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .data_intro{
+        width: 70%;
+    }
+}
+
+.footer{
+    height: 150px;
+    background-color: rgb(210, 173, 173);
+}
+
+.footer>div{
+    display: flex;
     justify-content: center;
-    
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 0;
 }
 
-.catch_img{
-    width: 60%;
-    max-width: 450px;
-    filter: drop-shadow(15px 15px 15px rgb(121, 9, 76));
+.footer>div>a>img{
+    width: 50px;
+    height: 50px;
+    margin-top: .5%;
 }
-
-.catch_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    max-width: 500px;
-}
-
- h1{
-    width: 90%;
-    text-align: left;
-    margin: 0 auto;
-}
-
-.overview p{
-    width: 90%;
-    text-align: left;
-    margin: 0 auto;
-}
-
-
-
-.ribbon_img{
-    margin: 0 auto;
-    width: 60%;
-    max-width: 300px;
-    filter: drop-shadow(5px 5px 5px rgb(121, 9, 76));
-}
-
-.ribbon_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    max-width: 500px;
-}
-
-
-.risk p{
-    width: 90%;
-    text-align: left;
-    margin: 0 auto;
-}
-

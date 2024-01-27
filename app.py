@@ -11,8 +11,7 @@ def index():
 @app.route('/predict', methods=['POST','GET'])
 def predict():
     return render_template('predict.html')
-    features = [float(x) for x in request.form.values()]
-    final= [np.array(features)]
+
 
 @app.route('/data')
 def data():
