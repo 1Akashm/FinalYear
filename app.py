@@ -7,9 +7,21 @@ app = Flask(__name__, static_url_path='/static')
 def index():
     return render_template('index.html')
 
-
 @app.route('/predict', methods=['POST','GET'])
 def predict():
+    
+    if request.method == 'POST':
+        selected_model = request.form['model']
+        prediction = ""
+
+        if selected_model == 'logistic':
+            # Perform logistic regression prediction and get result
+            prediction = "Prediction result for Logistic Regression is"
+        elif selected_model == 'svm':
+            # Perform SVM prediction and get result
+            prediction = "Prediction result for Support Vector Machine is"
+
+        return render_template('predict.html',prediction= prediction)
     return render_template('predict.html')
 
 
@@ -24,6 +36,15 @@ def faq():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/image', methods=['GET','POST'])
+def image():
+    prediction=""
+    if request.method== 'POST':
+        prediction = "image success"
+        return render_template('image.html',prediction= prediction)
+
+    return render_template('image.html',prediction="")
 
 
 if __name__ == '__main__':

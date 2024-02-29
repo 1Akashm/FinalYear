@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/image.css')}}"
+    />
+
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      type="text/javascript"
+      src="{{url_for('static',filename='image.js')}}"
+    ></script>
+  </head>
+  <body>
+    {% extends "index.html" %} {% block section %}
+
+    <form action="/image" method="post" id="image-form">
+      <div class="hero">
+        <label for="input-file" id="drop-area">
+          <input type="file" accept="image/*" id="input-file" hidden />
+          <div id="img-view">
+            <i class="bx bx-upload" id="upload"></i>
+            <p>Drag and drop or click <br />to upload image</p>
+            <span>upload images from the desktop</span>
+          </div>
+
+          <button type="submit" id="image-process" value="submit">
+            process
+          </button>
+        </label>
+       
+        <p class="final-pred">Result after processing : {{prediction}}</p>
+       
+      </div>
+    </form>
+
+    <div class="footer">
+      <div>
+        <h2>Final Year Project</h2>
+        <h3>Breast Cancer Prediction</h3>
+        <a href="{{url_for('index')}}"
+          ><img src="../static/images/logo.png" alt="logo" class="logo"
+        /></a>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
